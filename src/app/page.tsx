@@ -1,9 +1,19 @@
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "./page.module.css";
+// import Image from "next/image";
+// import { Inter } from "@next/font/google";
+// import styles from "./page.module.css";
 
-const inter = Inter({ subsets: ["latin"] });
+import Counter from "@/components/Counter";
+import os from "os"; // node API's
+
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
-  return <h1>홈</h1>;
+  // console.log(os.hostname());
+  console.log("hello server");
+  return (
+    <>
+      <h1>홈</h1>
+      <Counter />
+    </>
+  );
 }
