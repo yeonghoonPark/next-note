@@ -4,6 +4,9 @@ import { Metadata } from "next";
 import { getProducts } from "@/service/products";
 
 import MeowArticle from "@/components/MeowArticle";
+import Image from "next/image";
+
+import clothesImage from "../../../public/images/clothes.jpg";
 
 // export const revalidate = 3;
 
@@ -18,6 +21,7 @@ export default async function ProductsPage() {
   return (
     <>
       <h1>제품 페이지</h1>
+      <Image src={clothesImage} alt='clothes' />
       <ul>
         {products.map((cV, i) => (
           <li key={i}>
